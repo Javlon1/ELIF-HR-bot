@@ -1,1 +1,1 @@
-aiogram
+py -m pip install aiogram
