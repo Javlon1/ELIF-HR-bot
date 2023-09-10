@@ -1,7 +1,7 @@
 from handlers import admin, client
-from create_bot import executor, dp
+from create_bot import dp
 from data__base import sqlite_db
-
+from aiogram import executor
 # пишет в терминал
 async def on_startup(_):
     print('бот начал работу')
