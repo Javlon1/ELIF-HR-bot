@@ -1,6 +1,6 @@
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
-from create_bot import *
+from create_bot import bot,Dispatcher
 from aiogram import types
 from Keyboards.kb_client import inline_kb, year_kb, address_kb, address_kb, court_kb, info_kb, wedding_kb
 from data__base import sqlite_db

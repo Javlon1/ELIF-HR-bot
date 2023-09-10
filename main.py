@@ -1,5 +1,5 @@
 from handlers import admin, client
-from create_bot import *
+from create_bot import executor, dp
 from data__base import sqlite_db
 
 # пишет в терминал

@@ -1,4 +1,4 @@
-from create_bot import *
+from create_bot import bot, Dispatcher
 from aiogram import types
 from data__base import sqlite_db
 from Keyboards.kb_admin import kb_admin
