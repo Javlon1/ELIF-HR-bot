@@ -43,16 +43,32 @@ inline_kb = ReplyKeyboardMarkup(
 year_kb = ReplyKeyboardMarkup(
     keyboard=[
         [
+            KeyboardButton(1991),
+            KeyboardButton(1992),
+        ],
+        [
+            KeyboardButton(1993),
+            KeyboardButton(1994),
+        ],
+        [
+            KeyboardButton(1995),
+            KeyboardButton(1996),
+        ],
+        [
+            KeyboardButton(1997),
             KeyboardButton(1998),
+        ],
+        [
             KeyboardButton(1999),
-        ],
-        [
             KeyboardButton(2000),
-            KeyboardButton(2001),
         ],
         [
+            KeyboardButton(2001),
             KeyboardButton(2002),
+        ],
+        [
             KeyboardButton(2003),
+            KeyboardButton(2004),
         ],
     ],
     resize_keyboard=True, one_time_keyboard=True

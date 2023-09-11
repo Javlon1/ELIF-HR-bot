@@ -47,12 +47,12 @@ async def command_start(message: types.Message):
 
 
 async def about(message: types.Message):
-    await bot.send_message(chat_id=message.from_user.id, text=ABOUT, parse_mode="HTML")
+    await bot.send_message(chat_id=message.from_user.id, text=ABOUT, parse_mode="HTML", reply_markup=info_kb)
     await message.delete()
 
 
 async def command_help(message: types.Message):
-    await bot.send_message(chat_id=message.from_user.id, text=COMMAND_HELP, parse_mode="HTML")
+    await bot.send_message(chat_id=message.from_user.id, text=COMMAND_HELP, parse_mode="HTML", reply_markup=info_kb)
     await message.delete()
 
 
@@ -118,6 +118,8 @@ async def load_dataofbir(message: types.Message, state: FSMContext):
                     await message.answer("Tug'ilgan yilingizni to'g'ri yozing.", reply_markup=year_kb)
             else:
                 await message.answer("Tug'ilgan yilingizni bizga to'g'ri kelmaydi")
+                await state.finish()
+                await message.reply("Ro`yxatdan o`tish bekor qilindi\n\n", reply_markup=info_kb)
         else:
             await message.answer("Tug'ilgan yilingizni to'g'ri kiriting!\n\nMisol uchun: 2003", reply_markup=year_kb)
     else:
