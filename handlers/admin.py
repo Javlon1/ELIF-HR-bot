@@ -14,6 +14,7 @@ async def get_admin(message: types.Message):
     await bot.send_message(message.from_user.id, 'добро пожаловать админ', reply_markup=kb_admin)
     await message.delete()
 
+
 async def menu(message: types.Message):
     if message.from_user.id == KEY:
         await sqlite_db.sql_read(message)

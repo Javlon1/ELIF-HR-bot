@@ -5,7 +5,7 @@ btn_delete = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton('/delete')
-        ],
+        ]
     ]
 )
 
