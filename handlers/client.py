@@ -17,6 +17,7 @@ COMMAND_HELP = """
 </b></em>
 """
 
+
 ABOUT = """
 ELIF Gilam va Mebel Yuvish\n\n... хакида ... \n\nRasmiy kanalimiz - https://t.me/ELIF_GilamYuvish
 """
@@ -117,7 +118,7 @@ async def load_dataofbir(message: types.Message, state: FSMContext):
                 else:
                     await message.answer("Tug'ilgan yilingizni to'g'ri yozing.", reply_markup=year_kb)
             else:
-                await message.answer("Tug'ilgan yilingizni bizga to'g'ri kelmaydi")
+                await message.answer("Tug'ilgan yilingiz bizga to'g'ri kelmaydi")
                 await state.finish()
                 await message.reply("Ro`yxatdan o`tish bekor qilindi\n\n", reply_markup=info_kb)
         else:
@@ -228,13 +229,11 @@ def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(about, commands=['about'])
     # dp.register_message_handler(command_address, commands=['address'])
     dp.register_message_handler(cancel_handler, state="*", commands="cancel")
-    dp.register_message_handler(cancel_handler, Text(
-        equals="cancel", ignore_case=True), state="*")
+    dp.register_message_handler(cancel_handler, Text(equals="cancel", ignore_case=True), state="*")
     dp.register_message_handler(load_bolim, state=FSMAdmin.bolim)
     dp.register_message_handler(load_name, state=FSMAdmin.fullname)
     dp.register_message_handler(load_dataofbir, state=FSMAdmin.dataofbir)
-    dp.register_message_handler(load_photo, content_types=[
-                                'any'], state=FSMAdmin.photo)
+    dp.register_message_handler(load_photo, content_types=['any'], state=FSMAdmin.photo)
     dp.register_message_handler(load_num1, state=FSMAdmin.num1)
     dp.register_message_handler(load_num2, state=FSMAdmin.num2)
     dp.register_message_handler(load_address1, state=FSMAdmin.address1)

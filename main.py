@@ -2,6 +2,7 @@ from handlers import admin, client
 from create_bot import *
 from data__base import sqlite_db
 
+
 # пишет в терминал
 async def on_startup(_):
     print('бот начал работу')

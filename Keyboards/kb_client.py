@@ -11,6 +11,7 @@ start_kb = ReplyKeyboardMarkup(
     resize_keyboard=True, one_time_keyboard=True
 )
 
+
 info_kb = ReplyKeyboardMarkup(
     keyboard=[
         [
@@ -23,6 +24,7 @@ info_kb = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True, one_time_keyboard=True
 )
+
 
 inline_kb = ReplyKeyboardMarkup(
     keyboard=[
@@ -124,6 +126,7 @@ address_kb = ReplyKeyboardMarkup(
     resize_keyboard=True, one_time_keyboard=True
 )
 
+
 wedding_kb = ReplyKeyboardMarkup(
     keyboard=[
         [
@@ -136,6 +139,7 @@ wedding_kb = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True, one_time_keyboard=True
 )
+
 
 court_kb =  ReplyKeyboardMarkup(
     keyboard=[

@@ -3,6 +3,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 btn_delete = KeyboardButton('/delete')
 
+
 kb_admin = ReplyKeyboardMarkup(
     keyboard=[
         [
