@@ -7,7 +7,7 @@ btn_delete = KeyboardButton('/delete')
 kb_admin = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton('/Elifanketamenu'),
+            KeyboardButton('/menu'),
         ],
     ],
     resize_keyboard=True, one_time_keyboard=True
