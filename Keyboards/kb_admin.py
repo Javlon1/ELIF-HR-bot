@@ -1,7 +1,13 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
-btn_delete = KeyboardButton('/delete')
+btn_delete = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton('/delete')
+        ],
+    ]
+)
 
 
 kb_admin = ReplyKeyboardMarkup(

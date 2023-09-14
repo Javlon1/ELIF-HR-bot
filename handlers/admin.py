@@ -21,6 +21,5 @@ async def menu(message: types.Message):
 
 # рег хендлеров
 def register_handlers_admin(dp: Dispatcher):
-    dp.register_message_handler(get_admin, commands=["admin"], is_chat_admin=True)       
-    dp.register_message_handler(get_admin, Text(equals="admin", ignore_case=True), is_chat_admin=True)       
+    dp.register_message_handler(get_admin, commands=["Elifanketabaza"], is_chat_admin=True)       
     dp.register_message_handler(menu, commands=['menu'])
