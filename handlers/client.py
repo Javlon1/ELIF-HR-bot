@@ -62,21 +62,27 @@ async def command_help(message: types.Message):
 
 
 async def load_bolim(message: types.Message, state: FSMContext):
-    if message.text == "Operator(Ayol)":
-        async with state.proxy() as data:
-            data['bolim'] = "Operator"
-        await FSMAdmin.next()
-        await message.answer('Ism Familiyangiz: ')
-    elif message.text == "Yuvish(Erkak)":
-        async with state.proxy() as data:
-            data['bolim'] = "Yuvish"
-        await FSMAdmin.next()
-        await message.answer('Ism Familiyangiz: ')
+    if message.text == "Operator(Ayol)" or message.text == "Yuvish(Erkak)" or message.text == "Shafyorlik":
+        if message.text == "Operator(Ayol)":
+            async with state.proxy() as data:
+                data['bolim'] = "Operator"
+            await FSMAdmin.next()
+            await message.answer('Ism Familiyangiz: ')
+        elif message.text == "Yuvish(Erkak)":
+            async with state.proxy() as data:
+                data['bolim'] = "Yuvish"
+            await FSMAdmin.next()
+            await message.answer('Ism Familiyangiz: ')
+        else:
+            async with state.proxy() as data:
+                data['bolim'] = message.text
+            await FSMAdmin.next()
+            await message.answer('Ism Familiyangiz: ')
     else:
-        async with state.proxy() as data:
-            data['bolim'] = message.text
-        await FSMAdmin.next()
-        await message.answer('Ism Familiyangiz: ')
+        await message.answer("kim bo'lib ishlashni tanlang", reply_markup=inline_kb)
+
+
+
 
 
 # выход из состоянии

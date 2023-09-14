@@ -13,7 +13,6 @@ async def get_admin(message: types.Message):
     global KEY
     KEY = message.from_user.id
     await bot.send_message(message.from_user.id, 'добро пожаловать админ', reply_markup=kb_admin)
-    await message.delete()
 
 
 async def menu(message: types.Message):
